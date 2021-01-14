@@ -1,0 +1,75 @@
+  <!-- <carousel *ngIf="photos">
+    <slide *ngIf="photos.length>0">
+      <img [src]="'/uploads/' + photos[0].fileName" alt="'/uploads/' + photos[0].fileName">
+      <div class="carousel-caption d-none d-md-block">
+        <h3>First slide label</h3>
+        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+      </div>
+    </slide>
+    <slide *ngIf="photos.length>1">
+      <img [src]="'/uploads/' + photos[1].fileName" alt="'/uploads/' + photos[1].fileName">
+      <div class="carousel-caption d-none d-md-block">
+        <h3>Second slide label</h3>
+        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+      </div>
+    </slide>
+    <slide *ngIf="photos.length>2">
+      <img [src]="'/uploads/' + photos[2].fileName" alt="'/uploads/' + photos[2].fileName">
+      <div class="carousel-caption d-none d-md-block">
+        <h3>Third slide label</h3>
+        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+      </div>
+    </slide>
+    <slide *ngIf="photos.length>3">
+      <img [src]="'/uploads/' + photos[3].fileName" alt="'/uploads/' + photos[3].fileName">
+      <div class="carousel-caption d-none d-md-block">
+        <h3>Fourth slide label</h3>
+        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+      </div>
+    </slide>
+  </carousel>
+  <br><hr>
+  <div class="col-xs-12 col-md-12" *ngIf="vehicle">
+    <div class="row">
+      <h3>{{vehicle.name}}</h3>
+      <h3>{{vehicle.sellingPrice | currency: 'NGN': 'symbol-narrow'}}</h3>
+      <p>{{vehicle.description}}</p>
+    </div>
+  </div> -->
+  <div class="bs-example" *ngIf="photos">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Carousel indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <!-- Wrapper for carousel items -->
+        <div class="carousel-inner" *ngIf="photos.length>0">
+            <div class="item active">
+                <img [src]="'/uploads/' + photos[0].fileName" alt="First Slide">
+            </div>
+            <div class="item"  *ngIf="photos.length>1">
+                <img [src]="'/uploads/' + photos[1].fileName" alt="Second Slide">
+            </div>
+            <div class="item" *ngIf="photos.length>2">
+                <img [src]="'/uploads/' + photos[2].fileName" alt="Third Slide">
+            </div>
+        </div>
+        <!-- Carousel controls -->
+        <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="carousel-control right" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+    </div>
+</div>
+<div style="margin-left: 5rem; text-align: left;" class="col-xs-8 col-xs-offset-2 col-sm-8 col-sm-offset-2  col-md-5 col-md-offset-2 col-lg-4 col-lg-offset-3">
+  <h3>{{vehicle.name}}</h3>
+  <h4>{{vehicle.description}}</h4>
+  <h4>{{vehicle.sellingPrice | currency : 'NGN': 'symbol-narrow'}}</h4>
+</div>
+<br>
+<br>
+<br>

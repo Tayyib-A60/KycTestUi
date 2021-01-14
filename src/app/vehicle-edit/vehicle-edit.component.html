@@ -1,0 +1,66 @@
+<section class="section-book">
+  <div class="skrow">
+      <div class="skbook">
+          <div class="skbook__form">
+      <form class="skform" [formGroup]="vehicleForm" (ngSubmit)="onSubmit()">
+          <div class="skform__group">
+            <input
+            type="text"
+            placeholder="Name"
+            id="name"
+            formControlName="name"
+            class="skform__input" required>
+            <label for="name" class="skform__label">Name</label>
+        </div>
+        <div class="skform__group">
+          <input
+          type="number"
+          placeholder="cost price"
+          id="costprice"
+          formControlName="costPrice"
+          class="skform__input" required>
+          <label for="costprice" class="skform__label">Cost Price</label>
+      </div>
+      <div class="skform__group">
+        <input
+        type="number"
+        placeholder="selling price"
+        id="sellingprice"
+        formControlName="sellingPrice"
+        class="skform__input" required>
+        <label for="sellingprice" class="skform__label">Selling Price</label>
+    </div>
+      <div class="skform__group">
+        <input
+        type="number"
+        placeholder="discount"
+        id="discount"
+        formControlName="discount"
+        class="skform__input" required>
+        <label for="discount" class="skform__label">Discount</label>
+    </div>
+    <div class="skform__group">
+      <textarea
+      type="text"
+      placeholder="description"
+      id="description"
+      formControlName="description"
+      class="skform__input" required
+      rows="6"></textarea>
+      <label for="description" class="skform__label">Description</label>
+  </div>
+  <div class="skform__group">
+    <div class="u-margin-top-medium">
+        <button
+          type="submit"
+          class="skbtn skbtn-success"
+          [disabled]="!vehicleForm.valid">{{editMode? 'Update': 'Save'}}</button>
+        <button type="button" class="skbtn skbtn-danger" *ngIf='!editMode' (click)="clear()">Cancel</button>
+        <button type="button" class="skbtn skbtn-danger" *ngIf='editMode' (click)='delete()'>Delete</button>
+    </div>
+  </div>
+</form>
+</div>
+</div>
+</div>
+</section>
