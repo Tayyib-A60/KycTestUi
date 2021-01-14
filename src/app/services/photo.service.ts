@@ -46,13 +46,13 @@ export class PhotoService {
 
     // var inputs = `[{"inputType":"document-photo","group":0,"data":{"type":"passport","country":"NG","region":"","page":"front","filename":"ID_FRONT_SIDE.jpg"}}]`;
 
-    var inputs = `[{"inputType":"document-photo","group":0,"data":{"type":"national-id","country":"NG","region":"","page":"front","filename":"ID_FRONT_SIDE.jpg"}},{"inputType":"selfie-video","data":{"filename":"Liveness_video.mp4"}}]`;
+    // var inputs = `[{"inputType":"document-photo","group":0,"data":{"type":"national-id","country":"NG","region":"","page":"front","filename":"ID_FRONT_SIDE.jpg"}},{"inputType":"selfie-video","data":{"filename":"Liveness_video.mp4"}}]`;
 
-    console.log(inputs);
+    // console.log(inputs);
 
     formData.append('document', document1);
     formData.append('video', video);
-    formData.append('inputs', inputs);
+    formData.append('inputs', data['inputs']);
     formData.append('AccountId', data['AccountId']);
     // formData.append('phoneNumber', data['phoneNumber']);
     formData.append('documentType', data['documentType']);
