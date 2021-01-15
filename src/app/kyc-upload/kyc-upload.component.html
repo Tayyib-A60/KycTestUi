@@ -36,11 +36,28 @@
         <br>
         <div class="col-xs-12">
           <div class="form-group">
-      <label for="file">Document</label>
-      <input type="file" class="btn" #fileInput>
-      </div>
-    </div>
+            <label for="doctype">Document Type</label>
+            <select name="doctype" [(ngModel)]='docType' id="doctype">
+              <option value="0">PASSPORT</option>
+              <option value="1">BVN</option>
+              <option value="2">NIN</option>
+              <option value="3">NIN_SLIP</option>
+              <option value="4">DRIVERS_LICENSE</option>
+              <option value="5">VOTER_ID</option>
+              <option value="6">NATIONAL_ID</option>
+              <option value="7">Passport</option>
+              <option value="8">Passport</option>
+            </select>
+          </div>
+        </div>
+        <br>
       <br>
+        <div class="col-xs-12">
+          <div class="form-group">
+            <label for="file">Document</label>
+            <input type="file" class="btn" #fileInput>
+          </div>
+        </div>
       <!-- <input type="file" class="btn" #fileInput2>
         <br> -->
         <div class="col-xs-12">

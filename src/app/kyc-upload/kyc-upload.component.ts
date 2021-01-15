@@ -28,6 +28,7 @@ export class KycUploadComponent implements OnInit {
   detailsTab = false;
   photosTab = true;
   progress: number;
+  docType: number;
 
   constructor (
     private route: ActivatedRoute,
@@ -93,11 +94,11 @@ export class KycUploadComponent implements OnInit {
     const videoFile = nativeVideoElement.files[0];
     nativeVideoElement = '' as any;
 
-    console.log(videoFile);
+    console.log(this.docType);
 
 
     var data = {
-      'documentType': 'passport',
+      'documentType': this.docType,
       'inputs': this.input,
       'AccountId': this.accountId
     };

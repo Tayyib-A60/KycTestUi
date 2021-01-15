@@ -55,7 +55,7 @@ export class PhotoService {
     formData.append('inputs', data['inputs']);
     formData.append('AccountId', data['AccountId']);
     // formData.append('phoneNumber', data['phoneNumber']);
-    formData.append('documentType', data['documentType']);
+    formData.append('DocumentType', data['documentType']);
     const request = new HttpRequest('POST', `https://kuda-kyc-uat.kudabank.com/api/kyc/upload_documents`, formData, { reportProgress: true});
     return this.httpClient.request(request);
   }
